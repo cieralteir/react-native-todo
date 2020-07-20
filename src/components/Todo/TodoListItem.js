@@ -1,18 +1,23 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
 
-const TodoListItem = ({item}) => {
+const TodoListItem = ({item, index, press}) => {
   return (
-    <View style={styles.todoItem}>
-      <Text>{item.name}</Text>
-    </View>
+    <TouchableHighlight onPress={() => press(index)}>
+      <View
+        style={[styles.todoItem, item.done === 1 ? styles.todoItemDone : '']}>
+        <Text>{item.name}</Text>
+      </View>
+    </TouchableHighlight>
   );
 };
 
 const styles = StyleSheet.create({
   todoItem: {
     padding: 10,
-    color: '#BDBDBD',
+  },
+  todoItemDone: {
+    backgroundColor: '#4DB6AC',
   },
 });
 
