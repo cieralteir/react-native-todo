@@ -1,20 +1,24 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet} from 'react-native';
+
+import TheHeader from './components/TheHeader';
+import TodoList from './components/Todo/TodoList';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>TEST</Text>
-    </SafeAreaView>
+    <>
+      <TheHeader />
+      <SafeAreaView style={styles.container}>
+        <TodoList />
+      </SafeAreaView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
+  },
 });
 
 export default App;
