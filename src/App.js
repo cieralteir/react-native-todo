@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 import TheHeader from './components/TheHeader';
 import TodoList from './components/Todo/TodoList';

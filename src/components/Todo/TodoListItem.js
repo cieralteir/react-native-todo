@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
+import {StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 
-const TodoListItem = ({item, index, press}) => {
+const TodoListItem = ({item, press}) => {
   return (
-    <TouchableHighlight onPress={() => press(index)}>
+    <TouchableHighlight onPress={() => press(item.id)}>
       <View
         style={[styles.todoItem, item.done === 1 ? styles.todoItemDone : '']}>
         <Text>{item.name}</Text>
